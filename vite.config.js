@@ -1,17 +1,30 @@
-import { defineConfig } from "vite";
-import pages from "./vitejs/page.config.js";
+import { defineConfig } from 'vite'
+import legacy from '@vitejs/plugin-legacy'
+import pages from './vitejs/page.config'
 
-const pagesInput = {};
+const pagesInput = {}
 
-pages.forEach(page => {
-  pagesInput[page.name] = page.path;
-});
+pages.forEach((page) => {
+    pagesInput[page.name] = page.path
+})
 
 export default defineConfig({
-  base: 'https://evsedov.github.io/paulownia/',
-  rollupOptions: {
-    input: {
-      ...pagesInput
-    }
-  }
+    build: {
+        target: 'es2021',
+        sourcemap: true,
+        rollupOptions: {
+            input: {
+                ...pagesInput,
+            },
+        },
+        base: 'https://evsedov.github.io/paulownia/',
+    },
+    server: {
+        hmr: true,
+    },
+    plugins: [
+        legacy({
+            targets: ['defaults', 'not IE 11'],
+        }),
+    ],
 })
