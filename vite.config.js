@@ -1,12 +1,12 @@
 import { defineConfig } from 'vite'
 import legacy from '@vitejs/plugin-legacy'
-import pages from './vitejs/page.config'
+// import pages from './vitejs/page.config'
 
-const pagesInput = {}
+// const pagesInput = {}
 
-pages.forEach((page) => {
-    pagesInput[page.name] = page.path
-})
+// pages.forEach((page) => {
+//     pagesInput[page.name] = page.path
+// })
 
 export default defineConfig({
     base: 'https://evsedov.github.io/paulownia/',
@@ -14,9 +14,9 @@ export default defineConfig({
         target: 'es2021',
         sourcemap: true,
         rollupOptions: {
-            input: {
-                ...pagesInput,
-            },
+            // input: {
+            //     ...pagesInput,
+            // },
             output: {
                 assetFileNames: ({ name }) => {
                     if (/\.(gif|jpe?g|png|svg)$/.test(name ?? '')) {
