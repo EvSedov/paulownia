@@ -9,6 +9,7 @@ pages.forEach((page) => {
 })
 
 export default defineConfig({
+    base: 'https://evsedov.github.io/paulownia/',
     build: {
         target: 'es2021',
         sourcemap: true,
@@ -17,7 +18,6 @@ export default defineConfig({
                 ...pagesInput,
             },
         },
-        base: 'https://evsedov.github.io/paulownia/',
     },
     server: {
         hmr: true,
