@@ -1,4 +1,6 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
+import Inspect from 'vite-plugin-inspect'
 import legacy from '@vitejs/plugin-legacy'
 // import pages from './vitejs/page.config'
 
@@ -9,7 +11,13 @@ import legacy from '@vitejs/plugin-legacy'
 // })
 
 export default defineConfig({
-    base: 'https://evsedov.github.io/paulownia/',
+    // base: 'https://evsedov.github.io/paulownia/',
+    root: resolve(__dirname, 'src'),
+    resolve: {
+        alias: {
+            '@bootstrap': resolve(__dirname, 'node_modules/bootstrap'),
+        },
+    },
     build: {
         target: 'es2021',
         sourcemap: true,
@@ -40,6 +48,7 @@ export default defineConfig({
         hmr: true,
     },
     plugins: [
+        Inspect(),
         legacy({
             targets: ['defaults', 'not IE 11'],
         }),
