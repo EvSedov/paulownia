@@ -29,7 +29,7 @@
  * @param  selector    selector OR undefined
  * @author Brian Cherne <brian(at)cherne(dot)net>
  */
-
+import jQuery from 'jquery'
 ;(function (factory) {
     'use strict'
     if (typeof define === 'function' && define.amd) {

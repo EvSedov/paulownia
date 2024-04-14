@@ -34,7 +34,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "globals": "^15.0.0"
+    "globals": "^15.0.0",
+    "wow.js": "^1.2.2"
   },
   "eslintIgnore": [
     "node_modules",

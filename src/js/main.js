@@ -11,12 +11,13 @@ import '../css/style.css'
 // Libraries JS Files
 import * as bootstrap from 'bootstrap'
 import jQuery from 'jquery'
+import WOW from 'wow.js'
 
 window.jQuery = jQuery
 window.jquery = jQuery
 window.$ = jQuery
 
-jQuery(($) => {
+jQuery(() => {
     $(window).on('scroll', function () {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow')
@@ -104,11 +105,10 @@ jQuery(($) => {
     }
 
     $('.nav-menu a, #mobile-nav a, .scrollto').on('click', function () {
-        // eslint-disable-next-line no-restricted-globals
         if (
-            location.pathname.replace(/^\//, '') ===
+            window.location.pathname.replace(/^\//, '') ===
                 this.pathname.replace(/^\//, '') &&
-            location.hostname === this.hostname
+            window.location.hostname === this.hostname
         ) {
             let target = $(this.hash)
             if (target.length) {
