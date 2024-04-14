@@ -11,7 +11,7 @@ import legacy from '@vitejs/plugin-legacy'
 // })
 
 export default defineConfig({
-    base: '/paulownia/',
+    base: '/',
     root: resolve(__dirname, 'src'),
     resolve: {
         alias: {
