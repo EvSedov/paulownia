@@ -7,7 +7,7 @@
  *
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
  */
-
+import jQuery from 'jquery'
 ;(function ($) {
     var createdElements = []
 

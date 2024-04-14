@@ -3,8 +3,6 @@ import '@bootstrap/dist/css/bootstrap.css'
 import '../lib/font-awesome/css/font-awesome.min.css'
 import '../lib/animate/animate.min.css'
 import '../lib/ionicons/css/ionicons.min.css'
-import '../lib/owlcarousel/assets/owl.carousel.min.css'
-import '../lib/magnific-popup/magnific-popup.css'
 import '../css/font-icon.css'
 import '../css/style.css'
 
@@ -18,13 +16,17 @@ window.jquery = jQuery
 window.$ = jQuery
 
 jQuery(() => {
-    $(window).on('scroll', function () {
+    const wow = new WOW()
+    wow.init()
+
+    $(window).on('scroll', () => {
         if ($(this).scrollTop() > 100) {
             $('.back-to-top').fadeIn('slow')
         } else {
             $('.back-to-top').fadeOut('slow')
         }
     })
+
     $('.back-to-top').on('click', () => {
         $('html, body').animate(
             {
@@ -40,17 +42,6 @@ jQuery(() => {
         topSpacing: 0,
         zIndex: '50',
     })
-
-    $('#intro-carousel').owlCarousel({
-        autoplay: true,
-        dots: false,
-        loop: true,
-        animateOut: 'fadeOut',
-        items: 1,
-    })
-
-    const wow = new WOW()
-    wow.init()
 
     $('.nav-menu').superfish({
         animation: {
@@ -144,58 +135,5 @@ jQuery(() => {
                 return false
             }
         }
-    })
-
-    $('.portfolio-popup').magnificPopup({
-        type: 'image',
-        removalDelay: 300,
-        mainClass: 'mfp-fade',
-        gallery: {
-            enabled: true,
-        },
-        zoom: {
-            enabled: true,
-            duration: 300,
-            easing: 'ease-in-out',
-            opener(openerElement) {
-                return openerElement.is('img')
-                    ? openerElement
-                    : openerElement.find('img')
-            },
-        },
-    })
-
-    $('.testimonials-carousel').owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            768: {
-                items: 2,
-            },
-            900: {
-                items: 3,
-            },
-        },
-    })
-
-    $('.clients-carousel').owlCarousel({
-        autoplay: true,
-        dots: true,
-        loop: true,
-        responsive: {
-            0: {
-                items: 2,
-            },
-            768: {
-                items: 4,
-            },
-            900: {
-                items: 6,
-            },
-        },
     })
 })
