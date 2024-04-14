@@ -49,7 +49,8 @@ jQuery(() => {
         items: 1,
     })
 
-    new WOW().init()
+    const wow = new WOW()
+    wow.init()
 
     $('.nav-menu').superfish({
         animation: {
