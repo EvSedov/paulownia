@@ -1299,3 +1299,7 @@ p.help-block li {
   height: 70px;
   margin: 0 auto;
 }
+
+.anchor {
+  padding-top: 55px;
+}
