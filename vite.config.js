@@ -11,8 +11,7 @@ import legacy from '@vitejs/plugin-legacy'
 // })
 
 export default defineConfig({
-    base: 'https://evsedov.github.io/paulownia/',
-    root: resolve(__dirname, 'src'),
+    base: '/paulownia/',
     resolve: {
         alias: {
             '@bootstrap': resolve(__dirname, 'node_modules/bootstrap'),

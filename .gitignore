@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+build
 dist-ssr
 *.local
 
@@ -22,7 +23,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-node_modules
-src/build
-src/dist
