@@ -219,7 +219,7 @@ h6 {
 #hero .hero-content h2 {
   color: #ffffff;
   margin-bottom: 40px;
-  font-size: 32px;
+  font-size: calc(28px + 8 * (100vw - 320px) / 880);
   text-align: left;
 }
 
@@ -283,10 +283,20 @@ h6 {
 }
 
 @media (max-width: 767px) {
+  #hero .hero-content h2 {
+    font-size: calc(18px + 8 * (100vw - 320px) / 880);
+  }
+
   #intro .intro-content h2 {
     font-size: 22px;
     background: #ffffffa3;
     padding: 15px;
+  }
+}
+
+@media (max-width: 380px) {
+  #hero .hero-content h2 {
+    font-size: calc(12px + 8 * (100vw - 320px) / 880);
   }
 }
 
