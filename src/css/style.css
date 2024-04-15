@@ -119,6 +119,12 @@ h6 {
   border-left: 0;
 }
 
+@media (max-width: 399px) {
+  #topbar a {
+    display: none;
+  }
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -131,8 +137,13 @@ h6 {
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 }
 
+#header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 #header #logo h1 {
-  font-size: 22px;
+  font-size: 30px;
   margin: 6px 0 0 0;
   padding: 0;
   line-height: 1;
@@ -156,14 +167,16 @@ h6 {
   margin-right: 10px;
 }
 
+@media (max-width: 998px) {
+  #header #logo h1 {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   #header {
     padding: 20px 0;
     height: 74px;
-  }
-
-  #header #logo h1 {
-    font-size: 34px;
   }
 
   #header #logo img {
@@ -404,7 +417,7 @@ h6 {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #nav-menu-container {
     display: none;
   }
@@ -412,7 +425,7 @@ h6 {
 
 /* Nav Meu Styling */
 .nav-menu a {
-  padding: 6px 20px;
+  padding: 6px;
   text-decoration: none;
   display: inline-block;
   color: #555;
@@ -482,8 +495,11 @@ h6 {
 @media (max-width: 768px) {
   #mobile-nav-toggle {
     display: inline;
+    top: 40px;
   }
 }
+
+
 
 /* Mobile Nav Styling */
 #mobile-nav {
