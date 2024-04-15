@@ -38,8 +38,13 @@ jQuery(() => {
         return false
     })
 
-    $('#header').sticky({
+    $('#topbar').sticky({
         topSpacing: 0,
+        zIndex: '51',
+    })
+
+    $('#header').sticky({
+        topSpacing: '42px',
         zIndex: '50',
     })
 

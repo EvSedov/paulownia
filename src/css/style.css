@@ -176,7 +176,6 @@ h6 {
 @media (max-width: 768px) {
   #header {
     padding: 20px 0;
-    height: 74px;
   }
 
   #header #logo img {
@@ -1317,5 +1316,5 @@ p.help-block li {
 }
 
 .anchor {
-  padding-top: 55px;
+  padding-top: 90px;
 }
