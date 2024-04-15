@@ -506,6 +506,7 @@ h6 {
   #mobile-nav-toggle {
     display: inline;
     top: 40px;
+    right: 10px;
   }
 }
 
