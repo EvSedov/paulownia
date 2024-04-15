@@ -16,11 +16,8 @@ window.jquery = jQuery
 window.$ = jQuery
 
 jQuery(() => {
-    const wow = new WOW()
-    wow.init()
-
     $(window).on('scroll', () => {
-        if ($(this).scrollTop() > 100) {
+        if ($(window).scrollTop() > 150) {
             $('.back-to-top').fadeIn('slow')
         } else {
             $('.back-to-top').fadeOut('slow')
@@ -28,13 +25,7 @@ jQuery(() => {
     })
 
     $('.back-to-top').on('click', () => {
-        $('html, body').animate(
-            {
-                scrollTop: 0,
-            },
-            1500,
-            'easeInOutExpo',
-        )
+        $('html, body').animate({ scrollTop: 0 }, 800)
         return false
     })
 
@@ -47,6 +38,9 @@ jQuery(() => {
         topSpacing: '42px',
         zIndex: '50',
     })
+
+    const wow = new WOW()
+    wow.init()
 
     $('.nav-menu').superfish({
         animation: {
