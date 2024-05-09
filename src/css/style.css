@@ -707,14 +707,15 @@ Inner Banner
 }
 
 #about .content h3 {
-  color: #555;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  font-style: italic;
 }
 
 #about .content p {
+  color: #555;
+  font-style: italic;
+  font-weight: 300;
   line-height: 26px;
 }
 
