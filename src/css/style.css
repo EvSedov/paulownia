@@ -214,31 +214,17 @@ h6 {
 
 #hero .hero-content h2 {
   color: #ffffff;
-  margin-bottom: 40px;
   font-size: calc(28px + 8 * (100vw - 320px) / 880);
   text-align: left;
 }
 
+#hero .hero-content h2:first-child {
+  margin-bottom: 3em;
+}
+
 #hero .hero-content h2 span {
-  text-align: right;
   text-transform: uppercase;
   font-weight: 700;
-}
-
-#hero .hero-content .btn-banner {
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 30px;
-  color: #ffffff;
-  padding: 10px 25px;
-  font-weight: bold;
-}
-
-#hero .hero-content .btn-banner:hover {
-  background: none;
-  color: #fff;
-  background: #0062cc;
-  border: 2px solid #0062cc;
 }
 
 #intro {
@@ -278,9 +264,21 @@ h6 {
   font-weight: 700;
 }
 
+@media (max-width: 1200px) {
+  #hero .hero-content h2:first-child {
+    margin-top: 7em;
+    margin-bottom: 1.5em;
+  }
+}
+
 @media (max-width: 767px) {
   #hero .hero-content h2 {
     font-size: calc(18px + 8 * (100vw - 320px) / 880);
+  }
+
+  #hero .hero-content h2:first-child {
+    margin-top: 10em;
+    margin-bottom: 1em;
   }
 
   #intro .intro-content h2 {
@@ -290,9 +288,20 @@ h6 {
   }
 }
 
+@media (max-width: 450px) {
+  #hero .hero-content h2:first-child {
+    margin-top: 11em;
+    margin-bottom: .6em;
+  }
+}
+
 @media (max-width: 380px) {
   #hero .hero-content h2 {
     font-size: calc(12px + 8 * (100vw - 320px) / 880);
+  }
+
+  #hero .hero-content h2:first-child {
+    margin-top: 12em;
   }
 }
 
