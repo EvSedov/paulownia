@@ -35,8 +35,8 @@ jQuery(() => {
     })
 
     $('#header').sticky({
-        topSpacing: '42px',
-        zIndex: '50',
+        topSpacing: '65px',
+        zIndex: '55',
     })
 
     const wow = new WOW()
