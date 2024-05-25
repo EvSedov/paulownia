@@ -255,11 +255,11 @@
 
         <div class="row contact-info">
           <div class="col-lg-5">
-            <div class="contact-address">
+            <!-- <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Адрес</h3>
               <address>НУЖЕН АДРЕС!!!</address>
-            </div>
+            </div> -->
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Номер телефона</h3>
@@ -279,15 +279,25 @@
                 <form name="sentMessage" class="well" id="contactForm" novalidate>
                   <div class="control-group">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Ваше имя и фамилия" id="name" required
-                        data-validation-required-message="Введите ваше имя и фамилию" />
+                      <input type="text" class="form-control" placeholder="Ваше имя и фамилия" name="name" id="name"
+                        required data-validation-required-message="Введите ваше имя и фамилию" />
                       <p class="help-block"></p>
-
                     </div>
                   </div>
+
+                  <div class="control-group">
+                    <div class="form-group">
+                      <div class="controls">
+                        <input type="phone" class="form-control" placeholder="Введите номер телефона" name="phone"
+                          id="phone" required data-validation-required-message="Введите номер телефона" />
+                        <p class="help-block"></p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="form-group">
                     <div class="controls">
-                      <input type="email" class="form-control" placeholder="Email" id="email" required
+                      <input type="email" class="form-control" placeholder="Email" name="email" id="email" required
                         data-validation-required-message="Введите ваш email" />
                     </div>
                   </div>
@@ -295,7 +305,7 @@
                   <div class="form-group">
                     <div class="controls">
                       <textarea rows="10" cols="100" class="form-control" placeholder="Текст сообщения" id="message"
-                        required data-validation-required-message="Введите ваше сообщение" minlength="5"
+                        name="message" required data-validation-required-message="Введите ваше сообщение" minlength="5"
                         data-validation-minlength-message="Min 5 characters" maxlength="999"
                         style="resize:none"></textarea>
                     </div>

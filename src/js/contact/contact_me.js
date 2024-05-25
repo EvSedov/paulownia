@@ -7,14 +7,15 @@ import $ from 'jquery'
 $(function () {
     $('input,textarea').jqBootstrapValidation({
         preventSubmit: true,
-        submitError: function ($form, event, errors) {
-            // something to have when submit produces an error ?
-            // Not decided if I need it yet
-        },
-        submitSuccess: function ($form, event) {
+        // submitError: function ($form, event, errors) {
+        // something to have when submit produces an error ?
+        // Not decided if I need it yet
+        // },
+        submitSuccess: function (_, event) {
             event.preventDefault() // prevent default submit behaviour
             // get values from FORM
             var name = $('input#name').val()
+            var phone = $('input#phone').val()
             var email = $('input#email').val()
             var message = $('textarea#message').val()
             var firstName = name // For Success/Failure Message
@@ -23,9 +24,9 @@ $(function () {
                 firstName = name.split(' ').slice(0, -1).join(' ')
             }
             $.ajax({
-                url: 'contact/contact_me.php',
+                url: 'send.php',
                 type: 'POST',
-                data: { name: name, email: email, message: message },
+                data: { name, phone, email, message },
                 cache: false,
                 success: function () {
                     // Success message
@@ -36,7 +37,7 @@ $(function () {
                         )
                         .append('</button>')
                     $('#success > .alert-success').append(
-                        '<strong>Your message has been sent. </strong>',
+                        '<strong>Ваше сообщение было отправлено. </strong>',
                     )
                     $('#success > .alert-success').append('</div>')
 
@@ -52,9 +53,9 @@ $(function () {
                         )
                         .append('</button>')
                     $('#success > .alert-danger').append(
-                        '<strong>Sorry ' +
+                        '<strong>Извините ' +
                             firstName +
-                            " it seems that my mail server is not responding...</strong> Could you please email me directly to <a href='mailto:me@example.com?Subject=Message_Me from myprogrammingblog.com'>me@example.com</a> ? Sorry for the inconvenience!",
+                            " похоже, что мой почтовый сервер не отвечает...</strong> Не могли бы вы, пожалуйста, написать мне напрямую по адресу <a href='mailto:info@karbon-biotech.com'>info@karbon-biotech.com</a>? Приношу извинения за причиненные неудобства!",
                     )
                     $('#success > .alert-danger').append('</div>')
                     //clear all fields
@@ -67,13 +68,13 @@ $(function () {
         },
     })
 
-    $('a[data-toggle="tab"]').click(function (e) {
+    $('a[data-toggle="tab"]').on('click', function (e) {
         e.preventDefault()
         $(this).tab('show')
     })
 })
 
 /*When clicking on Full hide fail/success boxes */
-$('#name').focus(function () {
+$('#name').on('focus', function () {
     $('#success').html('')
 })
