@@ -209,6 +209,10 @@ h2 {
   vertical-align: middle;
 }
 
+#hero-carousel .carousel-item {
+  max-height: 640px;
+}
+
 #hero .hero-content {
   position: absolute;
   bottom: 0;
@@ -219,6 +223,7 @@ h2 {
   justify-content: center;
   flex-direction: column;
   text-align: left;
+  z-index: 10;
 }
 
 #hero .hero-content h2 {
@@ -299,7 +304,7 @@ h2 {
 
 @media (max-width: 380px) {
   #hero .hero-content h2:first-child {
-    margin-top: 12em;
+    margin-top: 9em;
   }
 }
 
