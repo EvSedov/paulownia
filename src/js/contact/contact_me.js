@@ -23,12 +23,20 @@ $(function () {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ')
             }
+
             $.ajax({
                 url: 'send.php',
                 type: 'POST',
                 data: { name, phone, email, message },
                 cache: false,
                 success: function () {
+                    // Send message in group of telegram
+                    $.ajax({
+                        url: 'telegram.php',
+                        type: 'POST',
+                        data: { name, phone, email, message },
+                        cache: false,
+                    })
                     // Success message
                     $('#success').html("<div class='alert alert-success'>")
                     $('#success > .alert-success')
