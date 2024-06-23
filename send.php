@@ -19,12 +19,12 @@
         $mail->SMTPAuth = true;                             // Enable SMTP authentication
 
         $mail->Host = 'mail.karbon-biotech.com';  																							// Specify main and backup SMTP servers
-        $mail->Username = 'site@karbon-biotech.com';        // Ваш логин от почты с которой будут отправляться письма
-        $mail->Password = 'gwx-h7n-7tL-RMG';                // Ваш пароль от почты с которой будут отправляться письма
+        $mail->Username = 'info@karbon-biotech.com';        // Ваш логин от почты с которой будут отправляться письма
+        $mail->Password = ']3JUjccVW4?uXAP/';                // Ваш пароль от почты с которой будут отправляться письма
         $mail->SMTPSecure = 'ssl';                          // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 465;                                  // TCP port to connect to / этот порт может отличаться у других провайдеров
         $mail->setFrom($email);                             // от кого будет уходить письмо?
-        $mail->addAddress('site@karbon-biotech.com');       // Кому будет уходить письмо 
+        $mail->addAddress('info@karbon-biotech.com');       // Кому будет уходить письмо 
         $mail->isHTML(true);                                // Set email format to HTML
         $mail->Subject = 'Письмо с сайта karbon-biotech.com';
         $mail->Body    = '' .$name . ' написал письмо<br>Телефон: ' .$phone. '<br>Почта: ' . $email . '<br>Сообщение: ' . $message;
