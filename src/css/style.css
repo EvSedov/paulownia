@@ -99,7 +99,6 @@ h2 {
 }
 
 #topbar .contact-info a {
-    /* line-height: 1; */
     color: #acacac;
     margin-right: 20px;
 }
@@ -201,12 +200,9 @@ h2 {
         no-repeat;
     background-size: cover;
     padding: 0;
-    /* padding-top: 99px; */
-    /* top: 0px; */
 }
 
 #hero .hero-banner {
-    /* width: 70%; */
     float: right;
     position: relative;
     bottom: 0px;
@@ -954,7 +950,6 @@ Inner Banner
     margin: 30px 15px;
     text-align: center;
     min-height: 250px;
-    /* box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08); */
 }
 
 @media (max-width: 767px) {
@@ -1057,7 +1052,6 @@ p.help-block li {
 }
 
 #call-to-action .cta-title {
-    /* color: #fff; */
     font-size: 28px;
     font-weight: 700;
 }
@@ -1140,18 +1134,14 @@ p.help-block li {
 #team .member .social a {
     color: #0978d1;
     margin: 2px 6px;
-    /* border: 1px solid #00b1e4; */
     width: 42px;
     display: inline-block;
-    /* opacity: .4; */
-    /* background: #eaeaea; */
     padding: 4px;
 }
 
 #team .member .social a:hover {
     color: #081e5b;
     margin: 2px 6px;
-    /* border: 1px solid #081e5b; */
     opacity: 1;
 }
 
