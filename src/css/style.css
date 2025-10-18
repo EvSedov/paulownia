@@ -159,23 +159,23 @@ h2 {
     align-items: center;
 }
 
+#header #logo {
+    justify-content: center;
+    align-items: center;
+}
+
 #header #logo h1 {
+    margin: 0;
     font-size: 30px;
-    margin: 6px 0 0 0;
-    padding: 0;
-    line-height: 1;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
 #header #logo h1 a {
     color: #0d2b48;
-    line-height: 1;
-    display: inline-block;
-}
-
-#header #logo h1 a span {
-    color: #38d39f;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #header #logo img {
@@ -684,13 +684,23 @@ Inner Banner
     padding: 60px 0 60px 0;
 }
 
+#about .row {
+    display: flex;
+    align-items: center;
+}
+
 #about .about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
 #about .about-img img {
     margin-left: -15px;
-    max-width: 100%;
+    max-width: 90%;
+    height: auto;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
